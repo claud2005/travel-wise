@@ -1,0 +1,7 @@
+{
+  "name": "travel-wise",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
