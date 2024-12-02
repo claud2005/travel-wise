@@ -1,7 +1,7 @@
 {
   "name": "Travel Wise",
   "short_name": "Travel Wise",
-  "theme_color": "#1976d2",
+  "theme_color": "#000",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
