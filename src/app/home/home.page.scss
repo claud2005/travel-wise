@@ -70,12 +70,36 @@
 
 /* Footer */
 .footer {
-  margin-top: 20px; /* Espaço entre os botões e o rodapé */
+  background-color: #f8f8f8; /* Cor de fundo do rodapé */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  border-top: 1px solid #e0e0e0; /* Linha superior */
+}
+
+.footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  padding: 20px 0;
+  justify-content: center; /* Centraliza o conteúdo */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: 10px; /* Espaço entre o conteúdo e os links */
+}
+
+.version {
+  margin-right: 10px; /* Espaço entre a versão e o ícone */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+}
+
+.footer-link {
+  margin: 0 10px; /* Espaço entre os links */
+  color: #007bff; /* Cor dos links */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
 }
 
 .version {
