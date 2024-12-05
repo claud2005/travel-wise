@@ -70,10 +70,10 @@
 
 /* Footer */
 .footer {
-  background-color: #f8f8f8; /* Cor de fundo do rodapé */
+  background-color: #000; /* Cor de fundo do rodapé */
   padding: 20px; /* Espaçamento interno */
   text-align: center; /* Centraliza o texto */
-  border-top: 1px solid #e0e0e0; /* Linha superior */
+  border-top: 1px solid #000; /* Linha superior */
 }
 
 .footer-content {
@@ -84,24 +84,8 @@
 }
 
 .version {
-  margin-right: 10px; /* Espaço entre a versão e o ícone */
+  margin-right: 40px; /* Espaço entre a versão e o ícone */
 }
-
-.footer-links {
-  display: flex;
-  justify-content: center; /* Centraliza os links */
-}
-
-.footer-link {
-  margin: 0 10px; /* Espaço entre os links */
-  color: #007bff; /* Cor dos links */
-  text-decoration: none; /* Remove o sublinhado */
-}
-
-.footer-link:hover {
-  text-decoration: underline; /* Sublinha ao passar o mouse */
-}
-
 .version {
   font-size: 1rem;
   color: #333;
