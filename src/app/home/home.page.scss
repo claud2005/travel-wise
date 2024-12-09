@@ -5,74 +5,114 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #f9f9f9; /* Fundo suave para destaque */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
 .header {
-  margin: 10% 0 20px; /* Espaço acima e abaixo */
+  margin: 5% 0 20px; /* Ajuste do espaço acima e abaixo */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .logo {
-  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
-  height: auto; /* Mantém a proporção da imagem */
+  max-width: 80%; /* Reduzindo a largura para um visual mais limpo */
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px; /* Arredondando bordas para um visual moderno */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .balloon-icon {
-  width: 80px; /* Tamanho da imagem do balão */
+  width: 100px; /* Aumentando o tamanho para melhor visibilidade */
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  animation: float 2s infinite; /* Adiciona um efeito de flutuação */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .app-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #4A4A4A;
   margin-top: 10px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Botões */
 .buttons-container {
-  width: 100%; /* Garante que os botões ocupem toda a largura */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espaçamento entre os botões */
+  gap: 15px; /* Maior espaçamento entre os botões */
+  padding: 20px;
 }
 
 .google-button, .login-button, .register-button {
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 8px 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 20px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .google-button {
   background-color: #4285f4;
   color: white;
   border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.google-button:hover {
+  background-color: #357ae8;
+  transform: scale(1.05);
 }
 
 .login-button {
   background-color: #333;
   color: white;
   border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-button:hover {
+  background-color: #555;
+  transform: scale(1.05);
 }
 
 .register-button {
   color: #333;
-  border: 1px solid #333;
+  border: 2px solid #333;
   background-color: transparent;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-button:hover {
+  background-color: #f3f3f3;
+  transform: scale(1.05);
 }
 
 /* Footer */
 .footer {
   padding: 20px;
   text-align: center;
-  border-top: 1px solid #000;
+  border-top: 2px solid #e0e0e0;
+  background-color: #fff;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.05);
 }
 
 .footer-content {
@@ -80,22 +120,23 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  gap: 20px; /* Espaço entre os itens */
 }
 
 .version {
-  font-size: 1rem;
-  color: #333;
-  margin-right: 40px;
+  font-size: 1.1rem;
+  color: #666;
+  margin-right: 0; /* Removido para centralização limpa */
 }
 
 .help-icon {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 2rem;
+  color: #666;
   cursor: pointer;
-  transition: transform 0.2s, color 0.2s;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .help-icon:hover {
-  transform: rotate(15deg);
-  color: #666;
+  transform: rotate(20deg);
+  color: #333;
 }
