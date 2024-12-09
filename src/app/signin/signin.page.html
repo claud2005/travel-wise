@@ -12,18 +12,18 @@
     <h1>Fazer Login</h1>
     <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="form-wrapper">
       <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" required>
-          <ion-icon slot="start" name="mail"></ion-icon>
-        </ion-input>
-      </ion-item>
-      
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" required>
-          <ion-icon slot="start" name="lock-closed"></ion-icon>
-        </ion-input>
-      </ion-item>
+  <ion-label position="floating">Email</ion-label>
+  <ion-input type="email" required>
+    <ion-icon slot="start" name="mail"></ion-icon>
+  </ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Password</ion-label>
+  <ion-input type="password" required>
+    <ion-icon slot="start" name="lock-closed"></ion-icon>
+  </ion-input>
+</ion-item>
 
       <ion-button expand="block" class="google-button">Inscreve-te com a Google</ion-button>
       <a class="register-link" routerLink="/register">Não tem conta? Registe-se</a>
