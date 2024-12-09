@@ -11,6 +11,10 @@
     font-size: 2rem;
     margin-bottom: 20px;
   }
+
+  h2 {
+    margin-top: 10px; /* Espaçamento entre o cabeçalho e o botão de voltar */
+  }
   
   .form-wrapper {
     width: 100%;
@@ -35,7 +39,8 @@
     margin-bottom: 5px; /* Espaçamento entre o rótulo e o campo de entrada */
   }
   ion-button {
-    margin-bottom: 20px; /* Espaçamento entre o botão de voltar e o restante do formulário */
+    margin-top: 10px; /* Espaçamento entre o botão de voltar e o cabeçalho */
+    margin-bottom: 10px; /* Espaçamento entre o botão de voltar e o restante do formulário */
   }
   
   .google-button {
