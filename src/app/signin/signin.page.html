@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Fazer Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+  <div class="form-wrapper">
+    <h1>Fazer Login</h1>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <ion-item class="input-item">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        ></ion-input>
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+      </ion-item>
+
+      <ion-item class="input-item">
+        <ion-label position="floating">Palavra-Passe</ion-label>
+        <ion-input
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        ></ion-input>
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" class="google-button">
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        Inscreve-te com a Google
+      </ion-button>
+      <a routerLink="/register" class="register-link">Não tem conta? Registe-se</a>
+
+      <ion-button expand="block" type="submit" class="confirm-button">
+        Confirmar
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

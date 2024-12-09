@@ -1,0 +1,53 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .input-item {
+    margin-bottom: 15px;
+    ion-icon {
+      font-size: 1.2rem;
+      color: #555;
+    }
+  }
+  
+  .google-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4285f4;
+    color: white;
+    margin: 15px 0;
+    --padding-start: 0;
+  }
+  
+  .confirm-button {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+  }
+  
+  .register-link {
+    display: block;
+    margin-top: 10px;
+    color: #4285f4;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
