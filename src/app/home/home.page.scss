@@ -16,13 +16,14 @@
   margin-top: 10%;
 }
 .logo {
-  max-width: 75%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  max-width: 50%; /* Garante que a imagem não ultrapasse a largura do contêiner */
   height: auto; /* Mantém a proporção da imagem */
 }
-.balloon-icon {
-  width: 80px; /* Tamanho da imagem do balão */
-  height: auto;
-  margin-bottom: 10px;
+
+@media (max-width: 390px) {
+  .logo {
+    max-width: 85%; /* Logo fica maior em dispositivos móveis */
+  }
 }
 
 .app-title {
