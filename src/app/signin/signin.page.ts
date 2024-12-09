@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.page.html',
@@ -10,7 +10,7 @@ export class SigninPage implements OnInit {
   email: string = '';
   password: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private navCtrl: NavController) {}
   
   ngOnInit(): void {
     throw new Error('Method not implemented.');
@@ -21,5 +21,13 @@ export class SigninPage implements OnInit {
     console.log('Senha:', this.password);
     this.router.navigate(['/home']);
   }
+  goBack() {
+    this.navCtrl.back(); // Navega para a página anterior
+  }
 
+  login() {
+    // Lógica de login aqui
+  }
 }
+
+
