@@ -6,6 +6,14 @@
   height: 100vh; /* Faz com que o container ocupe toda a altura da tela */
   padding: 20px; /* Adiciona um pouco de espaçamento */
 }
+
+.login-container {
+  padding: 16px; // Ajuste o padding conforme necessário
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
   
   h1 {
     font-size: 2rem;
@@ -26,6 +34,10 @@
     --inner-padding-start: 10px; /* Espaçamento interno para o ícone */
   }
   
+  ion-header {
+    --padding-top: 0; // Reduzir o espaço acima do cabeçalho
+  }
+
   ion-item {
     margin-bottom: 15px; /* Espaçamento entre os campos */
   }
@@ -39,7 +51,7 @@
     margin-bottom: 5px; /* Espaçamento entre o rótulo e o campo de entrada */
   }
   ion-button {
-    margin-top: 10px; /* Espaçamento entre o botão de voltar e o cabeçalho */
+    margin-top: 8px; /* Espaçamento entre o botão de voltar e o cabeçalho */
     margin-bottom: 10px; /* Espaçamento entre o botão de voltar e o restante do formulário */
   }
   
