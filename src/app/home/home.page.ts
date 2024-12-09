@@ -30,9 +30,4 @@ export class HomePage implements OnInit, OnDestroy {
   handleDarkModeChange = (event: MediaQueryListEvent) => {
     this.isDarkMode = event.matches; // Atualiza o estado com base na mudança
   };
-
-
-  goToLogin() {
-    this.router.navigate(["/login"]);
-  }
 }

@@ -13,7 +13,7 @@ export class SigninPage implements OnInit {
   constructor(private router: Router, private navCtrl: NavController) {}
   
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 
   onSubmit() {
