@@ -16,7 +16,7 @@
   margin-top: 10%;
 }
 .logo {
-  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  max-width: 50%; /* Garante que a imagem não ultrapasse a largura do contêiner */
   height: auto; /* Mantém a proporção da imagem */
 }
 .balloon-icon {
@@ -41,7 +41,7 @@
 }
 
 .google-button {
-  --background: #4285f4;
+  --background: #020304;
   --color: white;
   --border-radius: 5px;
   font-size: 1rem;
@@ -72,7 +72,6 @@
 .footer {
   padding: 20px; /* Espaçamento interno */
   text-align: center; /* Centraliza o texto */
-  border-top: 1px solid #000; /* Linha superior */
 }
 
 .footer-content {
