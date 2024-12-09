@@ -1,114 +1,98 @@
-/* Centralização e Estilo Geral */
 .custom-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh; /* Ocupa a altura total da tela */
-  background-color: #fff; /* Fundo branco limpo */
-  font-family: 'Arial', sans-serif; /* Fonte simples e legível */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto */
 }
+
 
 /* Header */
 .header {
-  margin-top: 10%; /* Margem superior para espaçamento */
+  margin-bottom: 20px; /* Espaço entre o cabeçalho e os botões */
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10%;
 }
-
 .logo {
-  display: none; /* Sem logo adicional, apenas o ícone */
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
 }
-
 .balloon-icon {
-  width: 70px; /* Ajuste no tamanho do balão */
+  width: 80px; /* Tamanho da imagem do balão */
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .app-title {
-  font-size: 1.8rem; /* Reduzindo o tamanho do texto para se ajustar */
+  font-size: 2rem;
   font-weight: bold;
-  color: #000;
-  margin: 10px 0; /* Espaçamento entre o balão e o título */
+  color: #333;
+  margin-top: 10px;
 }
 
 /* Botões */
 .buttons-container {
-  width: 90%; /* Reduzindo a largura para caber melhor na tela */
+  width: 100%; /* Garante que os botões ocupem toda a largura */
   display: flex;
   flex-direction: column;
   gap: 10px; /* Espaçamento entre os botões */
 }
 
-.google-button, .login-button, .register-button {
-  font-size: 0.9rem; /* Texto mais compacto */
-  font-weight: 500;
-  padding: 10px 0; /* Botões mais finos */
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid #000;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
 .google-button {
-  background-color: #fff; /* Fundo branco */
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px; /* Espaço para o ícone */
-}
-
-.google-button:hover {
-  background-color: #f5f5f5;
+  --background: #4285f4;
+  --color: white;
+  --border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px; /* Botões mais compactos */
+  text-align: center;
 }
 
 .login-button {
-  background-color: #fff; /* Fundo branco */
-  color: #000;
-}
-
-.login-button:hover {
-  background-color: #f5f5f5;
+  --background: #333;
+  --color: white;
+  --border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
 }
 
 .register-button {
-  background-color: #fff; /* Fundo branco */
-  color: #000;
-}
-
-.register-button:hover {
-  background-color: #f5f5f5;
+  --color: #333;
+  --border-color: #333;
+  --border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
 }
 
 /* Footer */
 .footer {
-  margin-top: auto; /* Empurra para o final da tela */
-  padding: 10px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #000;
-  border-top: 1px solid #000;
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  border-top: 1px solid #000; /* Linha superior */
 }
 
 .footer-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px; /* Espaço entre versão e ícone de ajuda */
+  justify-content: center; /* Centraliza o conteúdo */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: 10px; /* Espaço entre o conteúdo e os links */
 }
 
 .version {
-  color: #000;
+  margin-right: 40px; /* Espaço entre a versão e o ícone */
+}
+.version {
+  font-size: 1rem;
+  color: #333;
 }
 
 .help-icon {
-  font-size: 1.2rem;
-  color: #000;
+  font-size: 1.5rem;
+  color: #333;
   cursor: pointer;
   transition: transform 0.2s, color 0.2s;
 }
