@@ -5,138 +5,115 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #f9f9f9; /* Fundo suave para destaque */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100vh; /* Ocupa a altura total da tela */
+  background-color: #fff; /* Fundo branco limpo */
+  font-family: 'Arial', sans-serif; /* Fonte simples e legível */
 }
 
 /* Header */
 .header {
-  margin: 5% 0 20px; /* Ajuste do espaço acima e abaixo */
+  margin-top: 10%; /* Margem superior para espaçamento */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .logo {
-  max-width: 80%; /* Reduzindo a largura para um visual mais limpo */
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 10px; /* Arredondando bordas para um visual moderno */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none; /* Sem logo adicional, apenas o ícone */
 }
 
 .balloon-icon {
-  width: 100px; /* Aumentando o tamanho para melhor visibilidade */
+  width: 70px; /* Ajuste no tamanho do balão */
   height: auto;
   margin-bottom: 15px;
-  animation: float 2s infinite; /* Adiciona um efeito de flutuação */
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
 
 .app-title {
-  font-size: 2.5rem;
+  font-size: 1.8rem; /* Reduzindo o tamanho do texto para se ajustar */
   font-weight: bold;
-  color: #4A4A4A;
-  margin-top: 10px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  color: #000;
+  margin: 10px 0; /* Espaçamento entre o balão e o título */
 }
 
 /* Botões */
 .buttons-container {
-  width: 100%;
+  width: 90%; /* Reduzindo a largura para caber melhor na tela */
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Maior espaçamento entre os botões */
-  padding: 20px;
+  gap: 10px; /* Espaçamento entre os botões */
 }
 
 .google-button, .login-button, .register-button {
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 12px 20px;
+  font-size: 0.9rem; /* Texto mais compacto */
+  font-weight: 500;
+  padding: 10px 0; /* Botões mais finos */
   text-align: center;
-  border-radius: 8px;
+  border-radius: 5px;
+  border: 1px solid #000;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.2s;
 }
 
 .google-button {
-  background-color: #4285f4;
-  color: white;
-  border: none;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fundo branco */
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Espaço para o ícone */
 }
 
 .google-button:hover {
-  background-color: #357ae8;
-  transform: scale(1.05);
+  background-color: #f5f5f5;
 }
 
 .login-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fundo branco */
+  color: #000;
 }
 
 .login-button:hover {
-  background-color: #555;
-  transform: scale(1.05);
+  background-color: #f5f5f5;
 }
 
 .register-button {
-  color: #333;
-  border: 2px solid #333;
-  background-color: transparent;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fundo branco */
+  color: #000;
 }
 
 .register-button:hover {
-  background-color: #f3f3f3;
-  transform: scale(1.05);
+  background-color: #f5f5f5;
 }
 
 /* Footer */
 .footer {
-  padding: 20px;
+  margin-top: auto; /* Empurra para o final da tela */
+  padding: 10px;
   text-align: center;
-  border-top: 2px solid #e0e0e0;
-  background-color: #fff;
-  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.05);
+  font-size: 0.8rem;
+  color: #000;
+  border-top: 1px solid #000;
 }
 
 .footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
-  gap: 20px; /* Espaço entre os itens */
+  gap: 10px; /* Espaço entre versão e ícone de ajuda */
 }
 
 .version {
-  font-size: 1.1rem;
-  color: #666;
-  margin-right: 0; /* Removido para centralização limpa */
+  color: #000;
 }
 
 .help-icon {
-  font-size: 2rem;
-  color: #666;
+  font-size: 1.2rem;
+  color: #000;
   cursor: pointer;
-  transition: transform 0.3s, color 0.3s;
+  transition: transform 0.2s, color 0.2s;
 }
 
 .help-icon:hover {
-  transform: rotate(20deg);
-  color: #333;
+  transform: rotate(15deg);
+  color: #666;
 }
