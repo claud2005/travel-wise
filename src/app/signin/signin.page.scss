@@ -1,12 +1,11 @@
 .login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    height: 100vh;
-    padding: 20px;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  height: 100vh; /* Faz com que o container ocupe toda a altura da tela */
+  padding: 20px; /* Adiciona um pouco de espaçamento */
+}
   
   h1 {
     font-size: 2rem;
@@ -23,6 +22,10 @@
     --inner-padding-start: 10px; /* Espaçamento interno para o ícone */
   }
   
+  ion-item {
+    margin-bottom: 15px; /* Espaçamento entre os campos */
+  }
+
   ion-icon {
     font-size: 1.2rem;
     color: #333;
