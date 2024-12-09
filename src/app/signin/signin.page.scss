@@ -55,24 +55,21 @@
     margin-bottom: 10px; /* Espaçamento entre o botão de voltar e o restante do formulário */
   }
   
-  .google-button {
-    margin: 15px 0;
-    background-color: #4285f4;
-    color: white;
+  .btn-google {
+    background-color: black; /* Cor de fundo preta */
+    color: white; /* Cor do texto branca para contraste */
     text-transform: none;
   }
   
-  .confirm-button {
-    margin-top: 10px;
-    background-color: black;
-    color: white;
+  .btn-confirm {
+    background-color: white; /* Cor de fundo branca */
+    color: black; /* Cor do texto preta para contraste */
     text-transform: none;
   }
   
-  .register-link {
-    display: block;
-    margin-top: 10px;
-    color: #4285f4;
+  .btn-register {
+    background-color: #333; /* Um tom de cinza escuro */
+    color: white; /* Cor do texto branca para contraste */
     font-size: 0.9rem;
     text-decoration: none;
   }
