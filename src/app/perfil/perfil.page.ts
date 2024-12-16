@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';  // Importando o Router
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -9,7 +10,10 @@ import { NavController } from '@ionic/angular';
 export class PerfilPage {
   userDescription: string = 'Descrição do usuário'; // Valor inicial da descrição
 
-  constructor(private navCtrl: NavController) {}
+  constructor(
+    private navCtrl: NavController,
+    private router: Router  // Adicionando o Router aqui
+  ) {}
 
   // Função para voltar à página anterior
   goBack() {
@@ -19,7 +23,8 @@ export class PerfilPage {
   // Função para editar perfil
   editProfile() {
     console.log('Editar Perfil clicado');
-    // Adicione a lógica de navegação ou edição aqui
+    // Usando o Router para navegar para a página de editar-perfil
+    this.router.navigate(['/editar-perfil']);
   }
 
   // Função para logout

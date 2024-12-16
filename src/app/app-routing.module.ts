@@ -22,10 +22,20 @@ const routes: Routes = [
   {
     path: 'index',
     loadChildren: () => import('./index/index.module').then( m => m.IndexPageModule)
-  },  {
+  },
+  {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },  {
+    path: 'editar-perfil',
+    loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
   },
+  {
+    path: 'exibir-tudo',
+    loadChildren: () => import('./exibir-tudo/exibir-tudo.module').then( m => m.ExibirTudoPageModule)
+  },
+
+  
 
 
 

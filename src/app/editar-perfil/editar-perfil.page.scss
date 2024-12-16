@@ -1,0 +1,25 @@
+.profile-container {
+    padding: 20px;
+    text-align: center;
+    max-width: 600px; /* Evita que o conteúdo se espalhe além de 600px */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    width: 100%; /* Usa toda a largura possível até o limite de max-width */
+}
+
+.avatar-container {
+    margin-bottom: 20px;
+}
+
+ion-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+form ion-item {
+    margin-bottom: 20px;
+}
+
+ion-button {
+    margin-top: 20px;
+}
