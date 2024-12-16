@@ -19,7 +19,7 @@ export class SigninPage implements OnInit {
   onSubmit() {
     console.log('Email:', this.email);
     console.log('Senha:', this.password);
-    this.router.navigate(['/home']);
+    this.router.navigate(['/index']);
   }
   goBack() {
     this.navCtrl.back(); // Navega para a página anterior
