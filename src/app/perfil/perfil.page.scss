@@ -1,6 +1,14 @@
 ion-content {
     --background: #fff;
   
+    .page-title {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+    }
+  
     .profile-header {
       text-align: center;
       margin-top: 20px;
@@ -8,10 +16,12 @@ ion-content {
       .avatar {
         display: flex;
         justify-content: center;
+        margin-bottom: 10px;
   
         ion-avatar {
           width: 100px;
           height: 100px;
+          margin-bottom: 10px;
         }
       }
   
@@ -22,16 +32,14 @@ ion-content {
         font-weight: bold;
       }
   
-      .description {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #666;
+      ion-item {
+        width: 80%;
+        margin: 10px auto;
+      }
   
-        ion-icon {
-          margin-right: 5px;
-          color: #999;
-        }
+      ion-input {
+        width: 100%;
+        padding-left: 5px;
       }
     }
   

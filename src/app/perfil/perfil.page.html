@@ -1,27 +1,29 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
+      <!-- Botão de Voltar -->
       <ion-button (click)="goBack()">
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>O meu Perfil</ion-title>
+    <!-- Remover Título da Navbar -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <!-- Título "O meu Perfil" dentro do conteúdo -->
+  <h1 class="page-title">O meu Perfil</h1>
+
   <!-- Seção do Avatar e Nome -->
   <div class="profile-header">
     <div class="avatar">
       <ion-avatar>
-        <img src="assets/Logo_SemFundo.png" alt="Logo" class="logo" /> 
+        <img src="assets/Logo_SemFundo.png" alt="Logo" class="logo" />
       </ion-avatar>
     </div>
-    <h2 class="username">nome utilizador</h2>
-    <p class="description">
-      <ion-icon name="create-outline"></ion-icon>
-      descrição
-    </p>
+    <h2 class="username">Nome Utilizador</h2>
+    <!-- Campo de Descrição Editável -->
+    <textarea [(ngModel)]="userDescription" class="description" placeholder="Descrição"></textarea>
   </div>
 
   <!-- Dashboard -->

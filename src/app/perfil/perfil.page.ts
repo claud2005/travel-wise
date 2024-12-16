@@ -7,9 +7,11 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage {
+  userDescription: string = 'Descrição do usuário'; // Valor inicial da descrição
+
   constructor(private navCtrl: NavController) {}
 
-  // Voltar para a página anterior
+  // Função para voltar à página anterior
   goBack() {
     this.navCtrl.back();
   }
