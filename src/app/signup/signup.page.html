@@ -1,13 +1,57 @@
-<ion-header [translucent]="true">
+
+
+<ion-header>
   <ion-toolbar>
-    <ion-title>Signup</ion-title>
+      <ion-button fill="clear" (click)="goBack()">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+        Voltar
+      </ion-button>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <div class="register-container">
+    <h1>Registar</h1>
+   <form>
+     <!-- Campo Utilizador -->
+     <ion-item>
+      <ion-label position="stacked">Utilizador</ion-label>
+      <ion-input placeholder="" required>
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <!-- Campo Email -->
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="email" placeholder="" required>
+        <ion-icon slot="start" name="mail-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <!-- Campo Palavra-Passe -->
+    <ion-item>
+      <ion-label position="stacked">Palavra-Passe</ion-label>
+      <ion-input type="password" placeholder="" required>
+        <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <!-- Confirmar Palavra-Passe -->
+    <ion-item>
+      <ion-label position="stacked">Confirmar Palavra-Passe</ion-label>
+      <ion-input type="password" placeholder="" required>
+        <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <!-- Botão Google -->
+    <ion-button expand="block" color="light">
+      <ion-icon slot="start" name="logo-google" class="btn-google"></ion-icon>
+      Inscreve-te com a Google
+    </ion-button>
+
+    <!-- Botão Confirmar -->
+    <ion-button expand="block" class="confirm-button" type="submit">Confirmar</ion-button>
+    </form>
+  </div>
 </ion-content>

@@ -1,0 +1,79 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Faz com que o container ocupe toda a altura da tela */
+    padding: 20px; /* Adiciona um pouco de espaçamento */
+  }
+  
+  .register-container {
+    padding: 16px; // Ajuste o padding conforme necessário
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      margin-top: 10px; /* Espaçamento entre o cabeçalho e o botão de voltar */
+    }
+    
+    .form-wrapper {
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .input-item {
+      margin-bottom: 15px;
+      --inner-padding-start: 10px; /* Espaçamento interno para o ícone */
+    }
+    
+    ion-header {
+      --padding-top: 0; // Reduzir o espaço acima do cabeçalho
+    }
+  
+    ion-item {
+      margin-bottom: 15px; /* Espaçamento entre os campos */
+    }
+  
+    ion-icon {
+      font-size: 1.2rem;
+      color: #333;
+    }
+  
+    ion-label {
+      margin-bottom: 5px; /* Espaçamento entre o rótulo e o campo de entrada */
+    }
+    ion-button {
+      margin-top: 8px; /* Espaçamento entre o botão de voltar e o cabeçalho */
+      margin-bottom: 10px; /* Espaçamento entre o botão de voltar e o restante do formulário */
+    }
+    
+    .btn-google {
+      --background-color: black; /* Cor de fundo preta */
+      --color: white; /* Cor do texto branca para contraste */
+      text-transform: none;
+    }
+    
+    .btn-confirm {
+      background-color: white; /* Cor de fundo branca */
+      color: black; /* Cor do texto preta para contraste */
+      text-transform: none;
+    }
+    
+    .btn-register {
+      background-color: #333; /* Um tom de cinza escuro */
+      color: white; /* Cor do texto branca para contraste */
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    
+    .register-link:hover {
+      text-decoration: underline;
+    }
