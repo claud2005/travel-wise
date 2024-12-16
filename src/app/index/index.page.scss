@@ -1,28 +1,59 @@
-/* Container do perfil */
+/* Container Principal */
 .perfil-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-  }
-  
-  .avatar {
-    width: 80px;
-    height: 80px;
-    background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon-perfil {
-    font-size: 50px;
-    color: white;
-  }
-  
-  .perfil-nome {
-    margin-top: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Perfil com Icon e Texto */
+.perfil-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.icon-perfil {
+  font-size: 30px;
+  color: white;
+}
+
+.perfil-nome {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* Footer Button */
+.footer-button {
+  display: flex;
+  flex-direction: column;   /* Garante que o ícone e o texto fiquem em coluna */
+  align-items: center;      /* Alinha o ícone e o texto ao centro */
+  justify-content: center;  /* Garante que o conteúdo fique centrado */
+  text-transform: none;     /* Evita que o texto fique em maiúsculas */
+  --color: black;           /* Cor dos ícones e textos */
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+/* Apenas o ícone será o botão */
+.footer-button ion-icon {
+  font-size: 32px;          /* Tamanho do ícone */
+  margin-bottom: 5px;       /* Espaço entre o ícone e o texto */
+  cursor: pointer;         /* Aplica cursor de clique ao ícone */
+}
+
+.footer-button div {
+  font-size: 14px;          /* Tamanho do texto */
+  margin-top: 0;            /* Garantir que o texto fique perto do ícone */
+}
+
+
