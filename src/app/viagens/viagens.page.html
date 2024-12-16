@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Botão de Voltar -->
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- Remover Título da Navbar -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding content-center">
+  <!-- Título centralizado -->
+  <h1 class="central-title">Viagens</h1>
+
+  <!-- Barra de pesquisa -->
+  <ion-searchbar placeholder="search"></ion-searchbar>
+
+  <!-- Botão Adicionar no canto inferior direito -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<!-- Footer fixo com ícones -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="footer-row">
+        <ion-col class="footer-item">
+          <ion-button fill="clear" expand="block">
+            <ion-icon name="airplane" class="footer-icon"></ion-icon>
+          </ion-button>
+          <p class="footer-label">Viagens</p>
+        </ion-col>
+        <ion-col class="footer-item">
+          <ion-button fill="clear" expand="block">
+            <ion-icon name="home" class="footer-icon"></ion-icon>
+          </ion-button>
+          <p class="footer-label">Principal</p>
+        </ion-col>
+        <ion-col class="footer-item">
+          <ion-button fill="clear" expand="block">
+            <ion-icon name="person" class="footer-icon"></ion-icon>
+          </ion-button>
+          <p class="footer-label">Perfil</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

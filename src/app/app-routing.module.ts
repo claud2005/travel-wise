@@ -26,13 +26,13 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
-  },  {
-    path: 'editar-perfil',
-    loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
   },
   {
-    path: 'exibir-tudo',
-    loadChildren: () => import('./exibir-tudo/exibir-tudo.module').then( m => m.ExibirTudoPageModule)
+    path: 'editar-perfil',
+    loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
+  },  {
+    path: 'viagens',
+    loadChildren: () => import('./viagens/viagens.module').then( m => m.ViagensPageModule)
   },
 
   
