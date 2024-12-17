@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular'; // Importe o NavController
+
 
 @Component({
   selector: 'app-criarviagens',
@@ -6,9 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./criarviagens.page.scss'],
 })
 export class CriarviagensPage {
+  constructor(private navCtrl: NavController) {} // Injete o NavController
+
   goBack() {
     // Lógica para voltar
     console.log('Voltar para página anterior');
+    this.navCtrl.back(); // Método para voltar à página anterior
   }
 
   openMap() {
