@@ -6,47 +6,50 @@
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <!-- Remover Título da Navbar -->
+     <!-- Título centralizado -->
+     <div class="toolbar-title">
+      <h1 class="central-title" class="content-center">Viagens</h1>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding content-center">
-  <!-- Título centralizado -->
-  <h1 class="central-title">Viagens</h1>
-
   <!-- Barra de pesquisa -->
   <ion-searchbar placeholder="search"></ion-searchbar>
 
   <!-- Botão Adicionar no canto inferior direito -->
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
+      <ion-icon name="add"   routerLink="/criarviagens" ></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>
 
-<!-- Footer fixo com ícones -->
+<!-- Footer -->
 <ion-footer>
   <ion-toolbar>
     <ion-grid>
-      <ion-row class="footer-row">
-        <ion-col class="footer-item">
-          <ion-button fill="clear" expand="block">
-            <ion-icon name="airplane" class="footer-icon"></ion-icon>
+      <ion-row class="ion-justify-content-around">
+        <ion-col size="auto" class="ion-text-center">
+          <!-- Apenas o ícone é o botão -->
+          <ion-button fill="clear" routerLink="/viagens" class="footer-button">
+            <ion-icon name="airplane" size="large"></ion-icon>
           </ion-button>
-          <p class="footer-label">Viagens</p>
+          <div>Viagens</div>
         </ion-col>
-        <ion-col class="footer-item">
-          <ion-button fill="clear" expand="block">
-            <ion-icon name="home" class="footer-icon"></ion-icon>
+        <ion-col size="auto" class="ion-text-center">
+          <!-- Apenas o ícone é o botão -->
+          <ion-button fill="clear" routerLink="/index" class="footer-button">
+            <ion-icon name="home" size="large"></ion-icon>
           </ion-button>
-          <p class="footer-label">Principal</p>
+          <div>Principal</div>
         </ion-col>
-        <ion-col class="footer-item">
-          <ion-button fill="clear" expand="block">
-            <ion-icon name="person" class="footer-icon"></ion-icon>
+        <ion-col size="auto" class="ion-text-center">
+          <!-- Apenas o ícone é o botão -->
+          <ion-button fill="clear" routerLink="/perfil" class="footer-button">
+            <ion-icon name="person"  size="large"></ion-icon>
           </ion-button>
-          <p class="footer-label">Perfil</p>
+          <div>Perfil</div>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Botão de Voltar -->
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Criar Viagens</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Formulário de Criar Viagens -->
+  <form class="form-container">
+    <!-- Campo de Descrição -->
+    <ion-item class="form-item">
+      <ion-label position="stacked" color="primary">Descrição:</ion-label>
+      <ion-input placeholder="Digite uma descrição"></ion-input>
+    </ion-item>
+
+    <!-- Campo de Tipo -->
+    <ion-item class="form-item">
+      <ion-label color="primary">Tipo:</ion-label>
+      <ion-select placeholder="Selecionar Tipo">
+        <ion-select-option value="turista">Turista</ion-select-option>
+        <ion-select-option value="trabalho">Trabalho</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Campo de Estado -->
+    <ion-item class="form-item">
+      <ion-label color="primary">Estado:</ion-label>
+      <ion-select placeholder="Selecionar Estado">
+        <ion-select-option value="por-fazer">Por Fazer</ion-select-option>
+        <ion-select-option value="feito">Feito</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Seleção de Localização -->
+    <ion-item class="form-item">
+      <ion-label color="primary">Selecionar Localização:</ion-label>
+      <ion-button fill="solid" color="medium" expand="block" (click)="openMap()">
+        <ion-icon name="map-outline" slot="start"></ion-icon> Abrir Mapa
+      </ion-button>
+    </ion-item>
+
+    <!-- Seleção de Imagem -->
+    <ion-item class="form-item">
+      <ion-label color="primary">Selecionar Imagem:</ion-label>
+      <ion-button fill="solid" color="medium" expand="block" (click)="openImage()">
+        <ion-icon name="image-outline" slot="start"></ion-icon> Carregar Imagem
+      </ion-button>
+    </ion-item>
+
+    <!-- Campo de Data Inicial -->
+    <ion-item class="form-item">
+      <ion-label position="stacked" color="primary">Data Inicial:</ion-label>
+      <ion-datetime display-format="DD/MM/YYYY" placeholder="Selecionar Data"></ion-datetime>
+    </ion-item>
+
+    <!-- Campo de Data Final -->
+    <ion-item class="form-item">
+      <ion-label position="stacked" color="primary">Data Final:</ion-label>
+      <ion-datetime display-format="DD/MM/YYYY" placeholder="Selecionar Data"></ion-datetime>
+    </ion-item>
+
+    <!-- Botão Confirmar -->
+    <div class="confirmar-button">
+      <ion-button expand="block" color="primary" (click)="confirmarViagem()">
+        <ion-icon name="checkmark-outline" slot="start"></ion-icon>
+        Confirmar
+      </ion-button>
+    </div>
+  </form>
+</ion-content>
+
+
+<!-- Footer -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="ion-justify-content-around">
+        <ion-col size="auto" class="ion-text-center">
+          <!-- Apenas o ícone é o botão -->
+          <ion-button fill="clear" routerLink="/viagens" class="footer-button">
+            <ion-icon name="airplane" size="large"></ion-icon>
+          </ion-button>
+          <div>Viagens</div>
+        </ion-col>
+        <ion-col size="auto" class="ion-text-center">
+          <!-- Apenas o ícone é o botão -->
+          <ion-button fill="clear" routerLink="/index" class="footer-button">
+            <ion-icon name="home" size="large"></ion-icon>
+          </ion-button>
+          <div>Principal</div>
+        </ion-col>
+        <ion-col size="auto" class="ion-text-center">
+          <!-- Apenas o ícone é o botão -->
+          <ion-button fill="clear" routerLink="/perfil" class="footer-button">
+            <ion-icon name="person"  size="large"></ion-icon>
+          </ion-button>
+          <div>Perfil</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
+

@@ -1,58 +1,32 @@
-/* Centralização do Título */
-.content-center {
+/* Container do Formulário */
+.form-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
-  justify-content: center; /* Centraliza verticalmente */
+  gap: 15px; /* Espaçamento entre os elementos */
+}
+
+/* Estilização dos Itens do Formulário */
+.form-item {
+  margin-bottom: 10px;
+  --padding-start: 0;
+}
+
+/* Estilo dos Botões (Mapa e Imagem) */
+ion-button {
+  --border-radius: 8px; /* Botões mais arredondados */
+  font-size: 16px;
+}
+
+/* Botão Confirmar */
+.confirmar-button {
+  margin-top: 20px;
   text-align: center;
 }
 
-.central-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 20px;
-}
-
-/* Estilo dos cartões */
-.card-container {
-  width: 100%;
-}
-
-ion-card {
-  margin: 10px;
-  border: 1px solid #ccc;
-  box-shadow: none;
-  text-align: center;
-}
-
-ion-card-content h2 {
+.confirmar-button ion-button {
   font-size: 18px;
   font-weight: bold;
-}
-
-/* Reduzir a barra de pesquisa */
-.small-searchbar {
-  --height: 40px; /* Altura da barra */
-  width: 90%; /* Largura da barra ajustada */
-  max-width: 300px; /* Largura máxima para melhor responsividade */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  font-size: 14px; /* Reduz o tamanho do texto */
-  --border-radius: 10px; /* Cantos arredondados */
-}
-
-/* Botão Adicionar (FAB) */
-ion-fab-button {
-  --background: #000;
-  --color: #fff;
-  font-size: 24px; /* Tamanho do ícone no botão */
-}
-
-/* Container Principal */
-.perfil-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  --border-radius: 8px;
 }
 
 /* Perfil com Icon e Texto */
