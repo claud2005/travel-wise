@@ -8,21 +8,13 @@
   padding-top: 50px; /* Ajuste conforme necessário para puxar o conteúdo para cima */
 }
 
-.register-container {
-  padding: 16px; /* Ajuste o padding conforme necessário */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Certifique-se de alinhar ao topo */
-  align-items: center;
-}
-
 h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Mesma configuração do login */
 }
 
 h2 {
-  margin-top: 10px; /* Espaçamento entre o cabeçalho e o botão de voltar */
+  margin-top: 0px; /* Espaçamento entre o cabeçalho e o botão de voltar */
 }
 
 .form-wrapper {
