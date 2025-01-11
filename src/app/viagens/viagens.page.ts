@@ -11,6 +11,6 @@ export class ViagensPage {
 
   // Função para voltar à página anterior
   goBack() {
-    this.navCtrl.back();
+    this.navCtrl.back();  // Isso deve funcionar para voltar à página anterior
   }
 }

@@ -3,47 +3,46 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'home', // Direciona a rota padrão para a home
     pathMatch: 'full'
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+  {
     path: 'signup',
-    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+    loadChildren: () => import('./signup/signup.module').then(m => m.SignupPageModule)
   },
   {
     path: 'signin',
-    loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
+    loadChildren: () => import('./signin/signin.module').then(m => m.SigninPageModule)
   },
   {
     path: 'index',
-    loadChildren: () => import('./index/index.module').then( m => m.IndexPageModule)
+    loadChildren: () => import('./index/index.module').then(m => m.IndexPageModule)
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule)
   },
   {
     path: 'editar-perfil',
-    loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
-  },  {
+    loadChildren: () => import('./editar-perfil/editar-perfil.module').then(m => m.EditarPerfilPageModule)
+  },
+  {
     path: 'viagens',
-    loadChildren: () => import('./viagens/viagens.module').then( m => m.ViagensPageModule)
+    loadChildren: () => import('./viagens/viagens.module').then(m => m.ViagensPageModule)
   },
   {
     path: 'criarviagens',
-    loadChildren: () => import('./criarviagens/criarviagens.module').then( m => m.CriarviagensPageModule)
+    loadChildren: () => import('./criarviagens/criarviagens.module').then(m => m.CriarviagensPageModule)
   },
-
-  
-
-
-
-
+  {
+    path: '**',  // Esta rota é uma rota de "catch-all" para páginas não encontradas
+    redirectTo: 'home'  // Redireciona para a home se uma página não for encontrada
+  }
 ];
 
 @NgModule({
