@@ -6,20 +6,17 @@
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <!-- Título centralizado -->
-    <div class="toolbar-title">
-      <h1 class="central-title" class="content-center">Viagens</h1>
-    </div>
+    <ion-title>Viagens</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding content-center">
+<ion-content class="ion-padding">
   <!-- Barra de pesquisa -->
-  <ion-searchbar placeholder="search"></ion-searchbar>
+  <ion-searchbar placeholder="Pesquisar" (ionInput)="filterViagens($event)"></ion-searchbar>
 
   <!-- Lista de Viagens -->
   <ion-list>
-    <ion-item *ngFor="let viagem of viagens">
+    <ion-item *ngFor="let viagem of filteredViagens">
       <ion-label>
         <h2>{{ viagem.prop1 }}</h2>
         <p>{{ viagem.description }}</p>
