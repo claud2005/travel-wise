@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, LoadingController, ToastController, AlertController } from '@ionic/angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 
 interface Viagem {
@@ -27,12 +28,12 @@ enum State {
   templateUrl: './criarviagens.page.html',
   styleUrls: ['./criarviagens.page.scss'],
 })
-export class CriarviagensPage {
+export class CriarviagensPage implements OnInit {
   viagem!: Viagem;
   apiUrl: string = 'https://mobile-api-one.vercel.app/api/travels'; // URL da API
   name: string = 'claudiofreitas@ipvc.pt'; // Seu nome de usuário
   password: string = '!1lN(XNx'; // Sua senha
-  form: FormGroup = this.formBuilder.group({}); // Formulário reativo
+  form!: FormGroup; // Formulário reativo
 
   constructor(
     private navCtrl: NavController,
@@ -40,14 +41,16 @@ export class CriarviagensPage {
     private http: HttpClient,
     private loadingCtrl: LoadingController,
     private toastController: ToastController,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private route: ActivatedRoute
   ) {
     this.setUpForm();
   }
 
   ngOnInit() {
-    if (this.viagem) {
-      this.form.patchValue(this.viagem);
+    const viagemId = this.route.snapshot.paramMap.get('id');
+    if (viagemId) {
+      this.loadViagem(viagemId);
     }
   }
 
@@ -64,6 +67,20 @@ export class CriarviagensPage {
     });
   }
 
+  // Função para carregar a viagem a ser editada
+  async loadViagem(viagemId: string) {
+    const headers = new HttpHeaders({
+      Authorization: `Basic ${btoa(`${this.name}:${this.password}`)}`,
+    });
+
+    try {
+      this.viagem = await firstValueFrom(this.http.get<Viagem>(`${this.apiUrl}/${viagemId}`, { headers }));
+      this.form.patchValue(this.viagem);
+    } catch (error: any) {
+      console.error('Erro ao carregar viagem:', error);
+    }
+  }
+
   // Função para voltar à página anterior
   goBack() {
     this.navCtrl.back();
@@ -72,7 +89,7 @@ export class CriarviagensPage {
   // Função para salvar a viagem (criar ou atualizar)
   async save() {
     if (this.form.valid) {
-      if (this.viagem) {
+      if (this.viagem && this.viagem.id) {
         await this.updateViagem(this.form);
         return;
       }
@@ -144,25 +161,6 @@ export class CriarviagensPage {
     }
   }
 
-  // Função para deletar a viagem
-  async deleteViagem(viagem: Viagem) {
-    const loading = await this.showLoading();
-
-    const headers = new HttpHeaders({
-      Authorization: `Basic ${btoa(`${this.name}:${this.password}`)}`,
-    });
-
-    try {
-      await firstValueFrom(this.http.delete(`${this.apiUrl}/${viagem.id}`, { headers }));
-      loading.dismiss();
-      await this.presentToast('Viagem apagada com sucesso! ', 'success');
-      await this.goBack(); // Voltar após exclusão
-    } catch (error: any) {
-      loading.dismiss();
-      await this.handleError(error);
-    }
-  }
-
   // Função para tratar erros de API
   async handleError(error: any) {
     if (error.error) {
@@ -221,6 +219,6 @@ export class CriarviagensPage {
 
   confirmarViagem() {
     console.log('Confirmando viagem...');
-    // Implemente a lógica para confirmar a viagem aqui
+    this.save();
   }
 }

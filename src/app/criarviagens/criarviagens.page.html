@@ -12,41 +12,62 @@
 
 <ion-content class="ion-padding">
   <!-- Formulário de Criar Viagens -->
-  <form class="form-container">
+  <form [formGroup]="form" class="form-container">
+
+    <ion-item lines="full">
+      <ion-label position="stacked" color="primary">Nome da Viagem</ion-label>
+      <ion-input formControlName="prop1"></ion-input>
+    </ion-item>
+    <ion-note
+      *ngIf="form.get('prop1')?.hasError('required') && form.get('prop1')?.touched"
+      color="danger"
+    >
+      Campo obrigatório!
+    </ion-note>
     <!-- Campo de Descrição -->
-    <ion-item class="form-item">
+    <ion-item lines="full">
       <ion-label position="stacked" color="primary">Descrição:</ion-label>
-      <ion-input placeholder="Digite uma descrição"></ion-input>
+      <ion-input formControlName="description" placeholder="Digite uma descrição"></ion-input>
     </ion-item>
 
     <!-- Campo de Tipo -->
-    <ion-item class="form-item">
+    <ion-item lines="full">
       <ion-label color="primary">Tipo:</ion-label>
-      <ion-select placeholder="Selecionar Tipo">
+      <ion-select formControlName="type" placeholder="Selecionar Tipo">
         <ion-select-option value="turista">Turista</ion-select-option>
         <ion-select-option value="trabalho">Trabalho</ion-select-option>
       </ion-select>
     </ion-item>
 
     <!-- Campo de Estado -->
-    <ion-item class="form-item">
+    <ion-item lines="full">
       <ion-label color="primary">Estado:</ion-label>
-      <ion-select placeholder="Selecionar Estado">
-        <ion-select-option value="por-fazer">Por Fazer</ion-select-option>
-        <ion-select-option value="feito">Feito</ion-select-option>
+      <ion-select formControlName="state" placeholder="Selecionar Estado">
+        <ion-select-option value="TODO">Por Fazer</ion-select-option>
+        <ion-select-option value="DONE">Feito</ion-select-option>
       </ion-select>
     </ion-item>
 
-    <!-- Seleção de Localização -->
-    <ion-item class="form-item">
-      <ion-label color="primary">Selecionar Localização:</ion-label>
-      <ion-button fill="solid" color="medium" expand="block" (click)="openMap()">
-        <ion-icon name="map-outline" slot="start"></ion-icon> Abrir Mapa
-      </ion-button>
+    <ion-item lines="full">
+      <ion-label color="primary">Continente:</ion-label>
+      <ion-select formControlName="prop2" placeholder="Selecione o continente">
+        <ion-select-option value="Africa">África</ion-select-option>
+        <ion-select-option value="Asia">Ásia</ion-select-option>
+        <ion-select-option value="Europe">Europa</ion-select-option>
+        <ion-select-option value="North America">América do Norte</ion-select-option>
+        <ion-select-option value="South America">América do Sul</ion-select-option>
+        <ion-select-option value="Oceania">Oceania</ion-select-option>
+      </ion-select>
     </ion-item>
+    <ion-note
+      *ngIf="form.get('prop2')?.hasError('required') && form.get('prop2')?.touched"
+      color="danger"
+    >
+      Campo obrigatório!
+    </ion-note>
 
     <!-- Seleção de Imagem -->
-    <ion-item class="form-item">
+    <ion-item lines="full">
       <ion-label color="primary">Selecionar Imagem:</ion-label>
       <ion-button fill="solid" color="medium" expand="block" (click)="openImage()">
         <ion-icon name="image-outline" slot="start"></ion-icon> Carregar Imagem
@@ -54,15 +75,15 @@
     </ion-item>
 
     <!-- Campo de Data Inicial -->
-    <ion-item class="form-item">
+    <ion-item lines="full">
       <ion-label position="stacked" color="primary">Data Inicial:</ion-label>
-      <ion-datetime display-format="DD/MM/YYYY" placeholder="Selecionar Data"></ion-datetime>
+      <ion-datetime formControlName="startAt" display-format="DD/MM/YYYY" placeholder="Selecionar Data"></ion-datetime>
     </ion-item>
 
     <!-- Campo de Data Final -->
-    <ion-item class="form-item">
+    <ion-item lines="full">
       <ion-label position="stacked" color="primary">Data Final:</ion-label>
-      <ion-datetime display-format="DD/MM/YYYY" placeholder="Selecionar Data"></ion-datetime>
+      <ion-datetime formControlName="endAt" display-format="DD/MM/YYYY" placeholder="Selecionar Data"></ion-datetime>
     </ion-item>
 
     <!-- Botão Confirmar -->

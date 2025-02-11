@@ -6,8 +6,8 @@
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-     <!-- Título centralizado -->
-     <div class="toolbar-title">
+    <!-- Título centralizado -->
+    <div class="toolbar-title">
       <h1 class="central-title" class="content-center">Viagens</h1>
     </div>
   </ion-toolbar>
@@ -17,10 +17,32 @@
   <!-- Barra de pesquisa -->
   <ion-searchbar placeholder="search"></ion-searchbar>
 
+  <!-- Lista de Viagens -->
+  <ion-list>
+    <ion-item *ngFor="let viagem of viagens">
+      <ion-label>
+        <h2>{{ viagem.prop1 }}</h2>
+        <p>{{ viagem.description }}</p>
+        <p>{{ viagem.type }} - {{ viagem.state }}</p>
+        <p>Continente: {{ viagem.prop2 }}</p>
+        <p>Data Inicial: {{ viagem.startAt | date: 'dd/MM/yyyy' }}</p>
+        <p>Data Final: {{ viagem.endAt | date: 'dd/MM/yyyy' }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="editViagem(viagem.id)">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="deleteViagem(viagem.id)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
   <!-- Botão Adicionar no canto inferior direito -->
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button>
-      <ion-icon name="add"   routerLink="/criarviagens" ></ion-icon>
+    <ion-fab-button routerLink="/criarviagens">
+      <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>
@@ -47,7 +69,7 @@
         <ion-col size="auto" class="ion-text-center">
           <!-- Apenas o ícone é o botão -->
           <ion-button fill="clear" routerLink="/perfil" class="footer-button">
-            <ion-icon name="person"  size="large"></ion-icon>
+            <ion-icon name="person" size="large"></ion-icon>
           </ion-button>
           <div>Perfil</div>
         </ion-col>
