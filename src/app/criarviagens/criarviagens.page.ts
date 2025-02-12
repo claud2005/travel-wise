@@ -90,6 +90,7 @@ export class CriarviagensPage implements OnInit {
   async save() {
     if (this.form.valid) {
       if (this.viagem && this.viagem.id) {
+        console.log('Atualizando viagem:', this.viagem.id); // Adicione este log para verificar o ID da viagem
         await this.updateViagem(this.form);
         return;
       }
@@ -205,18 +206,6 @@ export class CriarviagensPage implements OnInit {
 
     await alert.present();
   }
-
-  // Adicionando os métodos faltantes
-  openMap() {
-    console.log('Abrindo mapa...');
-    // Implemente a lógica para abrir o mapa aqui
-  }
-
-  openImage() {
-    console.log('Abrindo imagem...');
-    // Implemente a lógica para abrir a imagem aqui
-  }
-
   confirmarViagem() {
     console.log('Confirmando viagem...');
     this.save();

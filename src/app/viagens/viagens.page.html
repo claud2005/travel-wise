@@ -26,6 +26,9 @@
         <p>Data Final: {{ viagem.endAt | date: 'dd/MM/yyyy' }}</p>
       </ion-label>
       <ion-buttons slot="end">
+        <ion-button (click)="viewViagem(viagem.id)">
+          <ion-icon name="eye-outline"></ion-icon>
+        </ion-button>
         <ion-button (click)="editViagem(viagem.id)">
           <ion-icon name="create-outline"></ion-icon>
         </ion-button>

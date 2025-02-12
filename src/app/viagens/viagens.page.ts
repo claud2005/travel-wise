@@ -67,6 +67,10 @@ export class ViagensPage implements OnInit {
     this.navCtrl.navigateForward(`/criarviagens/${viagemId}`);
   }
 
+  viewViagem(viagemId: string) {
+    this.navCtrl.navigateForward(`/detalhes-viagem/${viagemId}`);
+  }
+
   // Função para filtrar as viagens com base no texto de pesquisa
   filterViagens(event: any) {
     const searchTerm = event.target.value.toLowerCase();

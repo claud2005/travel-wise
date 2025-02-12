@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <!-- Botão de Voltar -->
+        <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Detalhes da Viagem</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <!-- Detalhes da Viagem -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ viagem.prop1 }}</ion-card-title>
+        <ion-card-subtitle>{{ viagem.type }} - {{ viagem.state }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ viagem.description }}</p>
+        <p>Continente: {{ viagem.prop2 }}</p>
+        <p>Data Inicial: {{ viagem.startAt | date: 'dd/MM/yyyy' }}</p>
+        <p>Data Final: {{ viagem.endAt | date: 'dd/MM/yyyy' }}</p>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Seção de Comentários -->
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Comentários</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let comment of viagem.comments">
+        <ion-label>
+          <h2>{{ comment.createdBy }}</h2>
+          <p>{{ comment.text }}</p>
+          <p>{{ comment.createdAt | date: 'short' }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  
+    <!-- Formulário de Comentário -->
+    <form [formGroup]="commentForm" class="form-container">
+      <ion-item lines="full">
+        <ion-label position="stacked" color="primary">Adicionar Comentário:</ion-label>
+        <ion-textarea formControlName="text" placeholder="Digite seu comentário"></ion-textarea>
+      </ion-item>
+      <div class="confirmar-button">
+        <ion-button expand="block" color="primary" (click)="addComment()">
+          <ion-icon name="send-outline" slot="start"></ion-icon>
+          Adicionar Comentário
+        </ion-button>
+      </div>
+    </form>
+  </ion-content>

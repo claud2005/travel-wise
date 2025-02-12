@@ -40,9 +40,14 @@ const routes: Routes = [
     loadChildren: () => import('./criarviagens/criarviagens.module').then(m => m.CriarviagensPageModule)
   },
   {
+    path: 'detalhes-viagem/:id',
+    loadChildren: () => import('./detalhes-viagem/detalhes-viagem.module').then(m => m.DetalhesViagemPageModule)
+  },
+  {
     path: '**',  // Esta rota é uma rota de "catch-all" para páginas não encontradas
     redirectTo: 'home'  // Redireciona para a home se uma página não for encontrada
   }
+
 ];
 
 @NgModule({
