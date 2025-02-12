@@ -70,13 +70,11 @@
       <ion-label position="stacked" color="primary">Data Inicial:</ion-label>
       <ion-datetime formControlName="startAt" display-format="DD/MM/YYYY" placeholder="Selecionar Data"></ion-datetime>
     </ion-item>
-
     <!-- Campo de Data Final -->
     <ion-item lines="full">
       <ion-label position="stacked" color="primary">Data Final:</ion-label>
       <ion-datetime formControlName="endAt" display-format="DD/MM/YYYY" placeholder="Selecionar Data"></ion-datetime>
     </ion-item>
-
     <!-- Botão Confirmar -->
     <div class="confirmar-button">
       <ion-button expand="block" color="primary" (click)="confirmarViagem()">
@@ -86,7 +84,6 @@
     </div>
   </form>
 </ion-content>
-
 <!-- Footer -->
 <ion-footer>
   <ion-toolbar>
@@ -107,7 +104,7 @@
           <div>Principal</div>
         </ion-col>
         <ion-col size="auto" class="ion-text-center">
-          <!-- Apenas o ícone é o botão -->
+          <!--o ícone é o botão -->
           <ion-button fill="clear" routerLink="/perfil" class="footer-button">
             <ion-icon name="person"  size="large"></ion-icon>
           </ion-button>
